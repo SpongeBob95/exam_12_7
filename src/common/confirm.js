@@ -3,7 +3,6 @@ function Confirm(props) {
         resolve('success');
         reject('fault');
     });
-
     return (
         promise
     )
