@@ -1,6 +1,8 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import './App.css';
 import InputNumber from "./common/InputNumber";
+import Confirm from "./common/confirm";
 
 
 class App extends React.Component {
@@ -26,6 +28,15 @@ class App extends React.Component {
                 }}/>
             </div>
         )
+    }
+
+    async componentDidMount(){
+        let res = await Confirm("确定删除吗");
+        if(res) {
+            console.log("是");
+        } else {
+            console.log("否");
+        }
     }
 
 }
